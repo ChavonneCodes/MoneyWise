@@ -1,0 +1,25 @@
+/*tells TypeScript how to handle your code
+when it checks and converts it into JavaScript */
+{
+  //how to compile the code
+  "compilerOptions": {
+    //js version
+    "target": "ES2022",
+    //module system. files share functionality with each other
+    "module": "commonjs",
+    //where is your source code located
+    "rootDir": "src",
+    //where to put js files after compiling
+    "outDir": "dist",
+    //stricter type  checking
+    "strict": true,
+    //easier tp import certain js packages into type script
+    "esModuleInterop": true,
+    //dont spend time checking type definitions of other packages for faster compilation and avoid certain errors originaing from dependencies
+    "skipLibCheck": true,
+    //ensures file names are referenced using consistent capitalization. Consistency on Windows and Linux servers
+    "forceConsistentCasingInFileNames": true
+  },
+  //which files to look at when compiling
+  "include": ["src"]
+}

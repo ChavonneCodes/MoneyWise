@@ -1,0 +1,45 @@
+DAY 1
+-I built the structure that everything will run on. The building without anything inside of it such as login,udgets, transactions, etc.
+-Built the beginnings of the backend server. Structure to receive messages and respod
+-How it will work:
+Angular(Frontend) is what the user sees and interacts with. The frontend will send requests and receive responses from the Backend done in Express. The backend processes requests and handles application knowledge. The backend reads and saves information from the database. The database stores users,transactions,budgets, etc.
+-We have installed:
+1.Node.js-The electricity in the building   
+        -Allows JavaScript to run outside a browser
+2.Express-The building framewrodk
+        -Helps us build the backend server
+3.Typescript-Building regulations
+            -Helps us catch mistakes in our code
+            -Type checking rather than waiting until the application runs
+4.ts-node-dev-Your construction assistant
+            -Automatically restarts the server when you change code
+5.dotenv-A safe for settings
+        -Store configuration outside your code
+6.Helmet-Security gates
+        -Adds security related protections
+7.CORS-The security guard
+        -Controls which websites can communicate with your backend
+
+package.json-project's instruction manual. It tells the project which packages it needs, which scripts are available, which dependencies it users
+tsconfig.json-tells TypeScript how to handle your code
+.env and .env.example-dont want to write your password directly in your code because someone might eventually see it on Github.Application read the value  without you having to write it directly in your code. The example is to show developers what information they need to configure
+                    -dont upload your actual .env file to Github
+-app.ts-sets up the restaurant like the tables and kitchen
+        -creates and configures our Express application
+-server.ts-starts the server and tells it which port to listen on
+-App.ts and server.ts are separated so thatwhen you test your application you can check app.ts without having to start an actual server
+
+-WHAT IS MIDDLEWARE
+-When someone sends a request to your backend, it passes through different functions before reaching its destination
+-for example someone new arrives at a building you may have to show identification and pass through security etc
+-1.Incoming request-Someone wants access to your backend
+-2.Helmet-adds security headers
+-3.CORS-Checks whether the requesting website is allowed
+-4.express.json()-Reads JSON data sent with the request. Makes the data readable
+-5.Route handler-Decides what to do with the request
+-6.Response-Sends an answer back  to the frontend
+
+WHAT HAPPENS WHEN SOMETHING  GOES WRONG
+-AppError and errorHandler
+-standard system for creating errors so that errors are created the same
+-If something goes wrong because the user made a mistake we can explain the problem. If it is ecause of a programming bug we shouldnt expose technical details to the user for example dataase passwords or internal server  information
